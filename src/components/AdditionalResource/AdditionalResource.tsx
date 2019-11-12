@@ -10,7 +10,7 @@ class AdditionalResource extends React.Component<PropTypes, {}> {
     return (
       <>
         <li>
-          <a href={this.props.resource}><h3>Additional Reading{this.props.index !== 0 ? ` ${this.props.index + 1}` : null}</h3></a>
+          <a href={this.props.resource} target="_blank"><h3>Additional Reading{this.props.index !== 0 ? ` ${this.props.index + 1}` : null}</h3></a>
         </li>
       </>
     );
