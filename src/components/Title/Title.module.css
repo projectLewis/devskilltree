@@ -1,0 +1,11 @@
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1%;
+  border-bottom: 3px solid rgb(39, 114, 39);
+  margin-bottom: 5px;
+}
+
+.titleH1 {
+  font-size: 42px;
+}

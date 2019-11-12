@@ -4,6 +4,8 @@ import { DATABYLEVEL } from "../../constants";
 import { Skill } from "../../interface";
 import AdditionalResource from "../AdditionalResource/AdditionalResource";
 import MainVideo from "../MainVideo/MainVideo";
+import style from "./MainContent.module.css";
+import MainContentMarks from "../MainContentMarks/MainContentMarks";
 
 interface State {
   currentSkill: Skill | undefined;
@@ -30,17 +32,15 @@ class MainContent extends React.Component<{}, State> {
       );
     }
     return (
-      <main>
-        <MainVideo video={this.state.currentSkill.video_embed} category={this.state.currentSkill.name} />
-        <div>
-          <h3>Complete</h3><input type="checkbox"></input>
-          <h3>Bookmark</h3><input type="checkbox"></input>
-        </div>
-        <ul>
+      <main className={style.mainContent}>
+        <MainVideo video={this.state.currentSkill.video_embed} skillName={this.state.currentSkill.name} />
+        <MainContentMarks />
+        <h2 className={style.additionalResourcesTitle}>Additional Resources:</h2>
+        <ol>
           {this.state.currentSkill.resources.map((resource) => {
             return (<AdditionalResource key={resource[1]} url={resource[0]} title={resource[1]} />);
           })}
-        </ul>
+        </ol>
       </main>
     );
   }

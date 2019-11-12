@@ -1,0 +1,16 @@
+.checkboxArea {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+
+.checkboxArea > h4 {
+  color: rgb(39, 114, 39);
+  margin-right: 5px;
+}
+
+.checkboxArea > input {
+  margin-right: 15px;
+}

@@ -1,0 +1,18 @@
+.sideBarOpen {
+    outline: 1px solid slateblue;
+    background-color: aliceblue;
+    width: 22%;
+    min-width: 230px;
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    /* transition: 0.5s; */
+    padding-left: 10px;
+}
+
+.sideBarClosed {
+    outline: 5px dashed darkorange;
+}

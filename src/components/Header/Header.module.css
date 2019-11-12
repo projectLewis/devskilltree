@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+}
+
+.nav {
+  margin-top: 0.2%;
+  display: flex;
+}
+
+.nav > div {
+  padding: 3px;
+}
+
+.nav > div:hover {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.userName {
+  color: rgb(39, 114, 39);
+}
+
+.logout:hover {
+  color: red;
+}
