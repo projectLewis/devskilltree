@@ -1,4 +1,4 @@
-export interface ApiResult {
+export interface Skill {
   level: number;
   name: string;
   name_uppercase: string;

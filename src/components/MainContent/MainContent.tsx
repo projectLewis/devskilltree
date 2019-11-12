@@ -1,12 +1,37 @@
+import axios from "axios";
 import React from "react";
+import { DATABYLEVEL } from "../../constants";
+import { Skill } from "../../interface";
 import AdditionalResource from "../AdditionalResource/AdditionalResource";
 import MainVideo from "../MainVideo/MainVideo";
 
-class MainContent extends React.Component<{}, {}> {
+interface State {
+  currentSkill: Skill | undefined;
+}
+
+class MainContent extends React.Component<{}, State> {
+  constructor(props = {}) {
+    super(props);
+    this.state = {
+      currentSkill: undefined
+    };
+  }
+
+  public componentDidMount() {
+    this.getDataByLevel(1);
+  }
+
   public render() {
+    if (this.state.currentSkill === undefined) {
+      return (
+        <div>
+          loading...
+        </div>
+      );
+    }
     return (
       <main>
-        <MainVideo />
+        <MainVideo video={this.state.currentSkill.video_embed} category={this.state.currentSkill.name} />
         <div>
           <h3>Complete</h3><input type="checkbox"></input>
           <h3>Bookmark</h3><input type="checkbox"></input>
@@ -17,6 +42,12 @@ class MainContent extends React.Component<{}, {}> {
         </ul>
       </main>
     );
+  }
+
+  private async getDataByLevel(level: number) {
+    const result = await axios.get(`${DATABYLEVEL}/${level}`);
+    const skill = result.data[0];
+    this.setState({ currentSkill: skill });
   }
 }
 
