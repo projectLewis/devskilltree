@@ -70,7 +70,36 @@ const findSkillsByLevel = async level => {
   }
 };
 
-// TODO
+const findUnlockedSkillsByLevel = async (level, unlockedFoundations) => {
+  try {
+    const skills = await SkillCategory.find({
+      level: { $lte: level },
+      foundation: { $in: unlockedFoundations }
+    })
+    const filteredSkills = [];
+    skills.forEach(skill => {
+      const doNotInclude = skill.foundation.some((foundation) => {
+        if (!unlockedFoundations.includes(foundation)) {
+          return true;
+        }
+        return false;
+      })
+      if (doNotInclude) {
+        return undefined;
+      } else {
+        const formattedSkill = {};
+        formattedSkill["name"] = skill.name;
+        formattedSkill["level"] = skill.level;
+        formattedSkill["_id"] = skill._id;
+        filteredSkills.push(formattedSkill)
+      }
+    })
+    return filteredSkills;
+  } catch (error) {
+    return `error of, ${ error }`
+  }
+};
+
 const findSkillsByTrack = async track => {
   try {
     const skills = await SkillCategory.find({ track: { $all: [track] } })
@@ -80,10 +109,9 @@ const findSkillsByTrack = async track => {
   }
 };
 
-// TODO
 const findSkillsByFoundation = async foundation => {
   try {
-    const skills = await SkillCategory.find({ prereqs: { $all: [foundation] } })
+    const skills = await SkillCategory.find({ foundation: { $all: [foundation] } })
     return skills;
   } catch (error) {
     return `error of, ${ error }`
@@ -117,6 +145,7 @@ if (!initialized) {
 module.exports = {
   findSkillByName,
   findSkillsByLevel,
+  findUnlockedSkillsByLevel,
   findSkillsByTrack,
   findSkillsByFoundation
 }

@@ -20,7 +20,7 @@ module.exports = {
           "Semantic HTML"
         ],
       ],
-      "foundation": ["None"],
+      "foundation": ["NONE"],
       "track": ["frontend"]
     },
     {
@@ -135,7 +135,7 @@ module.exports = {
           "Intro to Sass"
         ],
       ],
-      "foundation": ["CSS", "JavaScript"],
+      "foundation": ["CSS", "JAVASCRIPT"],
       "track": ["frontend"]
     },
     {
@@ -158,7 +158,7 @@ module.exports = {
           "Learn LESS in 10 Minutes (or Less) "
         ],
       ],
-      "foundation": ["CSS", "JavaScript"],
+      "foundation": ["CSS", "JAVASCRIPT"],
       "track": ["frontend"]
     },
     {
@@ -181,7 +181,7 @@ module.exports = {
           "React Styled Components Tutorial"
         ],
       ],
-      "foundation": ["CSS", "JavaScript", "React"],
+      "foundation": ["CSS", "JAVASCRIPT", "REACT"],
       "track": ["frontend"]
     },
     {
@@ -204,7 +204,7 @@ module.exports = {
           "Getting Started with CSS Modules "
         ],
       ],
-      "foundation": ["CSS", "JavaScript", "React"],
+      "foundation": ["CSS", "JAVASCRIPT", "REACT"],
       "track": ["frontend"]
     },
     {
@@ -250,7 +250,7 @@ module.exports = {
           "Introduction to Node.js / A beginners guide to Node.js and NPM"
         ],
       ],
-      "foundation": ["JavaScript"],
+      "foundation": ["JAVASCRIPT"],
       "track": ["backend"]
     },
     {
@@ -273,7 +273,7 @@ module.exports = {
           "Introduction to the React Challenges"
         ],
       ],
-      "foundation": ["JavaScript"],
+      "foundation": ["JAVASCRIPT"],
       "track": ["frontend"]
     },
     {
@@ -296,7 +296,7 @@ module.exports = {
           "Testing The Way It Should Be (aka Intro Into Cypress)"
         ],
       ],
-      "foundation": ["JavaScript"],
+      "foundation": ["JAVASCRIPT"],
       "track": ["frontend", "backend"]
     },
     {
@@ -319,7 +319,7 @@ module.exports = {
           "Express web framework (Node.js/JavaScript)"
         ],
       ],
-      "foundation": ["NodeJS"],
+      "foundation": ["NODEJS"],
       "track": ["backend"]
     },
     {
@@ -342,7 +342,7 @@ module.exports = {
           "The Definitive TypeScript Handbook"
         ],
       ],
-      "foundation": ["JavaScript"],
+      "foundation": ["JAVASCRIPT"],
       "track": ["language", "frontend", "backend"]
     },
     {
@@ -365,7 +365,7 @@ module.exports = {
           "Understanding Redux: The World’s Easiest Guide to Beginning Redux"
         ],
       ],
-      "foundation": ["React"],
+      "foundation": ["REACT"],
       "track": ["frontend"]
     },
     {
@@ -388,7 +388,7 @@ module.exports = {
           "SQL Commands"
         ],
       ],
-      "foundation": ["JavaScript"],
+      "foundation": ["JAVASCRIPT"],
       "track": ["language", "backend"]
     },
     {
@@ -411,7 +411,7 @@ module.exports = {
           "Introduction to NoSQL"
         ],
       ],
-      "foundation": ["JavaScript"],
+      "foundation": ["JAVASCRIPT"],
       "track": ["language", "backend"]
     },
     {
@@ -440,7 +440,7 @@ module.exports = {
     {
       "level": 7,
       "name": "PostgreSQL",
-      "name_uppercase": "PSOTGRESQL",
+      "name_uppercase": "POSTGRESQL",
       "video": "https://www.youtube.com/watch?v=Dd2ej-QKrWY",
       "video_embed": "https://www.youtube.com/embed/Dd2ej-QKrWY",
       "resources": [
@@ -480,7 +480,7 @@ module.exports = {
           "Why You Should Learn MongoDB (And 10 Resources to Help Get Started)"
         ],
       ],
-      "foundation": ["NoSQL"],
+      "foundation": ["NOSQL"],
       "track": ["backend"]
     },
     {
@@ -526,7 +526,7 @@ module.exports = {
           "Easily Develop Node.js and MongoDB Apps with Mongoose"
         ],
       ],
-      "foundation": ["MongoDB"],
+      "foundation": ["MONGODB"],
       "track": ["backend"]
     },
   ]
