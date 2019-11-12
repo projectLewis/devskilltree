@@ -1,11 +1,16 @@
 import React from "react";
 
-class AdditionalResource extends React.Component<{}, {}> {
+interface PropTypes {
+  index: number;
+  resource: string;
+}
+
+class AdditionalResource extends React.Component<PropTypes, {}> {
   public render() {
     return (
       <>
         <li>
-          <h3>Additional Resource</h3>
+          <a href={this.props.resource}><h3>Additional Reading{this.props.index !== 0 ? ` ${this.props.index + 1}` : null}</h3></a>
         </li>
       </>
     );
