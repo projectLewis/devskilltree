@@ -1,8 +1,8 @@
 import React from "react";
 
 interface PropTypes {
-  index: number;
-  resource: string;
+  url: string;
+  title: string;
 }
 
 class AdditionalResource extends React.Component<PropTypes, {}> {
@@ -10,7 +10,7 @@ class AdditionalResource extends React.Component<PropTypes, {}> {
     return (
       <>
         <li>
-          <a href={this.props.resource} target="_blank"><h3>Additional Reading{this.props.index !== 0 ? ` ${this.props.index + 1}` : null}</h3></a>
+          <a href={this.props.url} target="_blank" rel="noopener noreferrer"><h3>{this.props.title}</h3></a>
         </li>
       </>
     );

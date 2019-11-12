@@ -4,7 +4,7 @@ export interface Skill {
   name_uppercase: string;
   video: string;
   video_embed: string;
-  resource_links: string[];
+  resources: [string, string][];
   foundation: string[];
   track: string[];
 }

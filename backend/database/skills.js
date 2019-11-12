@@ -31,12 +31,12 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/yfoY53QXEnI",
       "resources": [
         [
-          "https://www.freecodecamp.org/learn/responsive-web-design/basic-css/",
-          "Introduction to Basic CSS"
-        ],
-        [
           "https://css-tricks.com/guides/beginner/",
           "Just Starting Out with CSS & HTML"
+        ],
+        [
+          "https://www.freecodecamp.org/learn/responsive-web-design/basic-css/",
+          "Introduction to Basic CSS"
         ],
         [
           "https://www.htmldog.com/guides/css/beginner/",
@@ -124,7 +124,7 @@ module.exports = {
       "resources": [
         [
           "https://sass-lang.com/guide",
-          "Sass Basics"
+          "Official: Sass Basics"
         ],
         [
           "https://www.freecodecamp.org/news/the-complete-guide-to-scss-sass-30053c266b23/",
@@ -170,11 +170,11 @@ module.exports = {
       "resources": [
         [
           "https://www.styled-components.com/docs/basics#getting-started",
-          "Styled Components: Getting Started"
+          "Official: Styled Components - Getting Started"
         ],
         [
           "https://medium.com/styled-components/styled-components-getting-started-c9818acbcbbd",
-          "Styled-components Getting Started: 2"
+          "Official: Styled-components - Getting Started: 2"
         ],
         [
           "https://www.robinwieruch.de/react-styled-components",
@@ -238,22 +238,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/TlB_eWDSMt4",
       "resources": [
         [
-          "",
-          ""
+          "https://nodejs.org/en/docs/guides/",
+          "Official: Node Docs/Guide"
         ],
         [
-          "",
-          ""
+          "https://developer.ibm.com/tutorials/learn-nodejs-tour-node/",
+          "Learn Node.js: A tour of Node.js"
         ],
         [
-          "",
-          ""
+          "https://itnext.io/introduction-to-node-js-a-beginners-guide-to-node-js-and-npm-eca9c408f9fe",
+          "Introduction to Node.js / A beginners guide to Node.js and NPM"
         ],
-      ],
-      "resource_links": [
-        "https://nodejs.org/en/docs/guides/",
-        "https://developer.ibm.com/tutorials/learn-nodejs-tour-node/",
-        "https://itnext.io/introduction-to-node-js-a-beginners-guide-to-node-js-and-npm-eca9c408f9fe"
       ],
       "foundation": ["JavaScript"],
       "track": ["backend"]
@@ -266,22 +261,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/Ke90Tje7VS0",
       "resources": [
         [
-          "",
-          ""
+          "https://reactjs.org/docs/getting-started.html",
+          "Official: React Get Started Guide"
         ],
         [
-          "",
-          ""
+          "https://scotch.io/starters/react/getting-started-with-react-2019-edition",
+          "Getting Started with React (2019 Edition)"
         ],
         [
-          "",
-          ""
+          "https://www.freecodecamp.org/learn/front-end-libraries/react/",
+          "Introduction to the React Challenges"
         ],
-      ],
-      "resource_links": [
-        "https://reactjs.org/docs/getting-started.html",
-        "https://scotch.io/starters/react/getting-started-with-react-2019-edition",
-        "https://www.freecodecamp.org/learn/front-end-libraries/react/"
       ],
       "foundation": ["JavaScript"],
       "track": ["frontend"]
@@ -294,22 +284,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/r9HdJ8P6GQI",
       "resources": [
         [
-          "",
-          ""
+          "https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2019-264e19514d0a",
+          "An Overview of JavaScript Testing in 2019"
         ],
         [
-          "",
-          ""
+          "https://www.youtube.com/watch?v=7r4xVDI2vho",
+          "Jest Crash Course - Unit Testing in JavaScript"
         ],
         [
-          "",
-          ""
+          "https://www.youtube.com/watch?v=pJ349YntoIs",
+          "Testing The Way It Should Be (aka Intro Into Cypress)"
         ],
-      ],
-      "resource_links": [
-        "https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2019-264e19514d0a",
-        "https://www.youtube.com/watch?v=7r4xVDI2vho",
-        "https://www.youtube.com/watch?v=pJ349YntoIs"
       ],
       "foundation": ["JavaScript"],
       "track": ["frontend", "backend"]
@@ -322,22 +307,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/L72fhGm1tfE",
       "resources": [
         [
-          "",
-          ""
+          "https://expressjs.com/en/starter/installing.html",
+          "Official: Express Get Started"
         ],
         [
-          "",
-          ""
+          "https://flaviocopes.com/express/",
+          "Express, a popular Node.js Framework"
         ],
         [
-          "",
-          ""
+          "https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs",
+          "Express web framework (Node.js/JavaScript)"
         ],
-      ],
-      "resource_links": [
-        "https://expressjs.com/en/starter/installing.html",
-        "https://flaviocopes.com/express/",
-        "https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs"
       ],
       "foundation": ["NodeJS"],
       "track": ["backend"]
@@ -350,22 +330,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/WBPrJSw7yQA",
       "resources": [
         [
-          "",
-          ""
+          "https://www.typescriptlang.org/docs/tutorial.html",
+          "Official: TypeScript Quick start"
         ],
         [
-          "",
-          ""
+          "https://www.valentinog.com/blog/typescript/",
+          "TypeScript Tutorial For Beginners: The Missing Guide (2019)"
         ],
         [
-          "",
-          ""
+          "https://www.freecodecamp.org/news/the-definitive-typescript-handbook/",
+          "The Definitive TypeScript Handbook"
         ],
-      ],
-      "resource_links": [
-        "https://www.typescriptlang.org/docs/tutorial.html",
-        "https://www.valentinog.com/blog/typescript/",
-        "https://www.freecodecamp.org/news/the-definitive-typescript-handbook/"
       ],
       "foundation": ["JavaScript"],
       "track": ["language", "frontend", "backend"]
@@ -378,22 +353,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/93p3LxR9xfM",
       "resources": [
         [
-          "",
-          ""
+          "https://redux.js.org/introduction/getting-started",
+          "Official: Getting Started with Redux"
         ],
         [
-          "",
-          ""
+          "https://redux.js.org/introduction/learning-resources",
+          "Official: Learning Resources"
         ],
         [
-          "",
-          ""
+          "https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/",
+          "Understanding Redux: The World’s Easiest Guide to Beginning Redux"
         ],
-      ],
-      "resource_links": [
-        "https://redux.js.org/introduction/getting-started",
-        "https://redux.js.org/introduction/learning-resources",
-        "https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/"
       ],
       "foundation": ["React"],
       "track": ["frontend"]
@@ -406,22 +376,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/bEtnYWuo2Bw",
       "resources": [
         [
-          "",
-          ""
+          "https://www.lifewire.com/sql-fundamentals-1019780",
+          "The Fundamentals of SQL"
         ],
         [
-          "",
-          ""
+          "https://www.khanacademy.org/computing/computer-programming/sql",
+          "Intro to SQL: Querying and managing data"
         ],
         [
-          "",
-          ""
+          "https://beginner-sql-tutorial.com/sql-commands.htm",
+          "SQL Commands"
         ],
-      ],
-      "resource_links": [
-        "https://www.lifewire.com/sql-fundamentals-1019780",
-        "https://www.khanacademy.org/computing/computer-programming/sql",
-        "https://beginner-sql-tutorial.com/sql-commands.htm"
       ],
       "foundation": ["JavaScript"],
       "track": ["language", "backend"]
@@ -434,22 +399,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/uD3p_rZPBUQ",
       "resources": [
         [
-          "",
-          ""
+          "https://www.guru99.com/nosql-tutorial.html",
+          "NoSQL Tutorial: Learn NoSQL Features, Types, What is, Advantages"
         ],
         [
-          "",
-          ""
+          "https://www.openmymind.net/2011/8/15/How-You-Should-Go-About-Learning-NoSQL/",
+          "How You Should Go About Learning NoSQL"
         ],
         [
-          "",
-          ""
+          "https://www.geeksforgeeks.org/introduction-to-nosql/",
+          "Introduction to NoSQL"
         ],
-      ],
-      "resource_links": [
-        "https://www.guru99.com/nosql-tutorial.html",
-        "https://www.openmymind.net/2011/8/15/How-You-Should-Go-About-Learning-NoSQL/",
-        "https://www.geeksforgeeks.org/introduction-to-nosql/"
       ],
       "foundation": ["JavaScript"],
       "track": ["language", "backend"]
@@ -462,22 +422,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/9ylj9NR0Lcg",
       "resources": [
         [
-          "",
-          ""
+          "https://dev.mysql.com/doc/mysql-getting-started/en/",
+          "Official: Getting Started with MySQL"
         ],
         [
-          "",
-          ""
+          "http://www.mysqltutorial.org/getting-started-with-mysql/",
+          "Getting Started with MySQL"
         ],
         [
-          "",
-          ""
+          "https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial",
+          "A Basic MySQL Tutorial"
         ],
-      ],
-      "resource_links": [
-        "https://dev.mysql.com/doc/mysql-getting-started/en/",
-        "http://www.mysqltutorial.org/getting-started-with-mysql/",
-        "https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial"
       ],
       "foundation": ["SQL"],
       "track": ["backend"]
@@ -490,22 +445,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/Dd2ej-QKrWY",
       "resources": [
         [
-          "",
-          ""
+          "https://www.postgresql.org/docs/",
+          "Official: PostgreSQL Documentation"
         ],
         [
-          "",
-          ""
+          "http://www.postgresqltutorial.com/",
+          "PostgreSQL Tutorial"
         ],
         [
-          "",
-          ""
+          "https://medium.com/quick-code/top-tutorials-to-learn-postgresql-database-for-beginners-99ff0deb9f84",
+          "Top Tutorials To Learn PostgreSQL Database For Beginners"
         ],
-      ],
-      "resource_links": [
-        "https://www.postgresql.org/docs/",
-        "http://www.postgresqltutorial.com/",
-        "https://medium.com/quick-code/top-tutorials-to-learn-postgresql-database-for-beginners-99ff0deb9f84"
       ],
       "foundation": ["SQL"],
       "track": ["backend"]
@@ -518,22 +468,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/-56x56UppqQ",
       "resources": [
         [
-          "",
-          ""
+          "https://docs.mongodb.com/guides/",
+          "Official: Getting Started Guides"
         ],
         [
-          "",
-          ""
+          "https://www.freecodecamp.org/news/learn-mongodb-a4ce205e7739/",
+          "How to get started with MongoDB in 10 minutes"
         ],
         [
-          "",
-          ""
+          "https://learntocodewith.me/posts/mongodb/",
+          "Why You Should Learn MongoDB (And 10 Resources to Help Get Started)"
         ],
-      ],
-      "resource_links": [
-        "https://docs.mongodb.com/guides/",
-        "https://www.freecodecamp.org/news/learn-mongodb-a4ce205e7739/",
-        "https://learntocodewith.me/posts/mongodb/"
       ],
       "foundation": ["NoSQL"],
       "track": ["backend"]
@@ -546,22 +491,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/embed/pxo7L5nd1gA",
       "resources": [
         [
-          "",
-          ""
+          "https://sequelize.org/v5/manual/getting-started.html",
+          "Official: Getting started"
         ],
         [
-          "",
-          ""
+          "https://codeforgeek.com/getting-started-sequelize-postgresql/",
+          "Getting Started with Sequelize and PostgreSQL"
         ],
         [
-          "",
-          ""
+          "https://www.robinwieruch.de/postgres-express-setup-tutorial",
+          "Setup PostgreSQL with Sequelize in Express"
         ],
-      ],
-      "resource_links": [
-        "https://sequelize.org/v5/manual/getting-started.html",
-        "https://codeforgeek.com/getting-started-sequelize-postgresql/",
-        "https://www.robinwieruch.de/postgres-express-setup-tutorial"
       ],
       "foundation": ["SQL"],
       "track": ["backend"]
@@ -574,22 +514,17 @@ module.exports = {
       "video_embed": "https://www.youtube.com/watch?v=WDrU305J1yw",
       "resources": [
         [
-          "",
-          ""
+          "https://mongoosejs.com/docs/",
+          "Official: Getting Started"
         ],
         [
-          "",
-          ""
+          "https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/",
+          "Introduction to Mongoose for MongoDB"
         ],
         [
-          "",
-          ""
+          "https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications",
+          "Easily Develop Node.js and MongoDB Apps with Mongoose"
         ],
-      ],
-      "resource_links": [
-        "https://mongoosejs.com/docs/",
-        "https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/",
-        "https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications"
       ],
       "foundation": ["MongoDB"],
       "track": ["backend"]

@@ -37,8 +37,8 @@ class MainContent extends React.Component<{}, State> {
           <h3>Bookmark</h3><input type="checkbox"></input>
         </div>
         <ul>
-          {this.state.currentSkill.resource_links.map((resource, idx) => {
-            return (<AdditionalResource key={resource} index={idx} resource={resource} />);
+          {this.state.currentSkill.resources.map((resource) => {
+            return (<AdditionalResource key={resource[1]} url={resource[0]} title={resource[1]} />);
           })}
         </ul>
       </main>
