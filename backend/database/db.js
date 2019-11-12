@@ -28,6 +28,7 @@ const SkillCategorySchema = new mongoose.Schema({
     },
     // Youtube Resource
     video: String,
+    video_embed: String,
     // articles
     resource_link1: String,
     resource_link2: String,
