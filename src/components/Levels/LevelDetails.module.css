@@ -1,11 +1,13 @@
-.skillItemInprogress {
-  list-style: circle;
+.skillItemInprogress, .skillItemComplete {
   padding: 3px;
   cursor: pointer;
+  font-size: large;
+}
+
+.skillItemInprogress {
+  list-style: circle;
 }
 
 .skillItemComplete {
   list-style: disc;
-  padding: 3px;
-  cursor: pointer;
 }
