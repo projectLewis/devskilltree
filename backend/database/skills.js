@@ -511,7 +511,7 @@ module.exports = {
       "name": "Mongoose",
       "name_uppercase": "MONGOOSE",
       "video": "https://www.youtube.com/watch?v=WDrU305J1yw",
-      "video_embed": "https://www.youtube.com/watch?v=WDrU305J1yw",
+      "video_embed": "https://www.youtube.com/embed/WDrU305J1yw",
       "resources": [
         [
           "https://mongoosejs.com/docs/",

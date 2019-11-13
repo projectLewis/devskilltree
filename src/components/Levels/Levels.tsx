@@ -1,9 +1,11 @@
 import React from "react";
 import { SlimSkill } from "../../interface";
 import LevelDetails from "./LevelDetails";
+import style from "./Levels.module.css";
 
 interface PropTypes {
-  completedSkills: SlimSkill[];
+  completedSkills: SlimSkill["name"][];
+  viewableSkills: SlimSkill[];
   changeCurrentSkill: ((name: SlimSkill["name"]) => void);
 }
 
@@ -12,17 +14,24 @@ class Levels extends React.Component<PropTypes, {}> {
     return (
       <div>
         {
-          this.props.completedSkills.map((skill, idx) => {
+          this.props.viewableSkills.map((skill, idx) => {
+            let status: boolean;
+            if (this.props.completedSkills.includes(skill.name.toUpperCase())) {
+              status = true;
+            } else {
+              status = false;
+            }
             return (
               <>
                 {
-                  this.props.completedSkills[idx - 1] === undefined ||
-                    this.props.completedSkills[idx - 1].level !== skill.level ?
-                    <ul key={`${idx}_${skill.level}`}>Level {skill.level}</ul> :
+                  this.props.viewableSkills[idx - 1] === undefined ||
+                    this.props.viewableSkills[idx - 1].level !== skill.level ?
+                    <ul key={`${idx}_${skill.level}`}><h4 className={style.levelHeading}>Level {skill.level}</h4></ul> :
                     undefined
                 }
                 <LevelDetails
                   key={`${skill._id}_${skill.name}`}
+                  completed={status}
                   changeCurrentSkill={this.props.changeCurrentSkill}
                   skillName={skill.name}
                 />

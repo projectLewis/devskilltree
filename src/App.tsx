@@ -9,7 +9,8 @@ import { DATABYLEVEL } from "./constants";
 import { Skill, SlimSkill, Update } from "./interface";
 
 interface State {
-  completed: SlimSkill[];
+  viewable: SlimSkill[];
+  completed: SlimSkill["name"][];
   unlockedFoundations: SlimSkill["name"][];
   inprogress: SlimSkill[];
   currentLevel: number;
@@ -20,6 +21,7 @@ class App extends React.Component<{}, State> {
   constructor(props = {}) {
     super(props);
     this.state = {
+      viewable: [],
       completed: [],
       unlockedFoundations: ["NONE"],
       inprogress: [],
@@ -29,6 +31,7 @@ class App extends React.Component<{}, State> {
 
     this.updateLevel = this.updateLevel.bind(this);
     this.changeCurrentSkill = this.changeCurrentSkill.bind(this);
+    this.markCompleted = this.markCompleted.bind(this);
   }
 
   public componentDidMount() {
@@ -42,6 +45,7 @@ class App extends React.Component<{}, State> {
           <Header />
           <Title />
           <MainContent
+            markCompleted={this.markCompleted}
             currentLevel={this.state.currentLevel}
             updateLevel={this.updateLevel}
             currentSkillName={this.state.currentSkillName}
@@ -50,6 +54,7 @@ class App extends React.Component<{}, State> {
         </div>
         <SideBar
           completedSkills={this.state.completed}
+          viewableSkills={this.state.viewable}
           changeCurrentSkill={this.changeCurrentSkill}
         />
       </div>
@@ -82,7 +87,12 @@ class App extends React.Component<{}, State> {
     }
   }
 
-  private async getSkillsList(level: number, unlockedSkills: string[]) {
+  private markCompleted(skill: Skill["name"]) {
+    console.log("marked");
+    this.setState({ completed: [...this.state.completed, skill.toUpperCase()] });
+  }
+
+  private async getSkillsList(level: Skill["level"], unlockedSkills: string[]) {
     const unlockedSkillsString: string = unlockedSkills.join(",");
     try {
       const results = await axios.get(`${DATABYLEVEL}/${level}`, {
@@ -91,7 +101,7 @@ class App extends React.Component<{}, State> {
         }
       });
       const skills: SlimSkill[] = results.data;
-      this.setState({ completed: skills });
+      this.setState({ viewable: skills });
     } catch (error) {
       // TODO errors
       console.error(error);

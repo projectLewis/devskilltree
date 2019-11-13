@@ -1,7 +1,15 @@
+.unlockedHeading {
+    font-size: 24px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: slateblue;
+    margin-bottom: 13px;
+}
+
 .sideBarOpen {
-    outline: 1px solid slateblue;
+    border-right: 4px solid slateblue;
     background-color: aliceblue;
-    width: 22%;
+    width: 20%;
     min-width: 230px;
     height: 100%; 
     position: fixed;
@@ -10,9 +18,14 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     /* transition: 0.5s; */
-    padding-left: 10px;
+    padding-left: 25px;
 }
 
 .sideBarClosed {
-    outline: 5px dashed darkorange;
+    width: 35px;
+    background-color: slateblue;
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }

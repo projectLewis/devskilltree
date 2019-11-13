@@ -8,10 +8,11 @@ import MainVideo from "../MainVideo/MainVideo";
 import style from "./MainContent.module.css";
 
 interface PropTypes {
-  updateLevel: ((currentSkill: Skill, update: Update) => void);
   currentLevel: number;
   currentSkillName: Skill["name"] | undefined;
+  updateLevel: ((currentSkill: Skill, update: Update) => void);
   changeCurrentSkill: ((name: Skill["name"]) => void);
+  markCompleted: ((skill: Skill["name"]) => void);
 }
 
 interface State {
@@ -57,6 +58,7 @@ class MainContent extends React.Component<PropTypes, State> {
         <MainContentMarks
           currentSkill={this.state.currentSkill}
           updateLevel={this.props.updateLevel}
+          markCompleted={this.props.markCompleted}
         />
         <h2 className={style.additionalResourcesTitle}>Additional Resources:</h2>
         <ol>

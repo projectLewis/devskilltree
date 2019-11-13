@@ -4,8 +4,9 @@ import Levels from "../Levels/Levels";
 import style from "./SideBar.module.css";
 
 interface PropTypes {
-  completedSkills: SlimSkill[];
+  viewableSkills: SlimSkill[];
   changeCurrentSkill: ((name: SlimSkill["name"]) => void);
+  completedSkills: SlimSkill["name"][];
 }
 
 class SideBar extends React.Component<PropTypes, {}> {
@@ -13,9 +14,10 @@ class SideBar extends React.Component<PropTypes, {}> {
     // TODO add SideBarClosed
     return (
       <section className={style.sideBarOpen}>
-        <h3>Unlocked Skills</h3>
+        <h3 className={style.unlockedHeading}>Unlocked Skills</h3>
         <Levels
           completedSkills={this.props.completedSkills}
+          viewableSkills={this.props.viewableSkills}
           changeCurrentSkill={this.props.changeCurrentSkill}
         />
       </section>

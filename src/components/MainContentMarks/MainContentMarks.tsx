@@ -3,8 +3,9 @@ import { Skill, Update } from "../../interface";
 import style from "./MainContentMarks.module.css";
 
 interface PropTypes {
-  updateLevel: ((currentSkill: Skill, update: Update) => void);
   currentSkill: Skill;
+  updateLevel: ((currentSkill: Skill, update: Update) => void);
+  markCompleted: ((skill: Skill["name"]) => void);
 }
 
 interface State {
@@ -22,10 +23,20 @@ class MainContentMarks extends React.Component<PropTypes, State> {
     this.handleComplete = this.handleComplete.bind(this);
     this.handleBookmark = this.handleBookmark.bind(this);
   }
+
+  public componentDidUpdate(prevProps: PropTypes) {
+    if (prevProps.currentSkill.name !== this.props.currentSkill.name) {
+      this.setState({
+        completed: false,
+        bookmarked: false
+      });
+    }
+  }
+
   public render() {
     return (
       <div className={style.checkboxArea}>
-        <h4>Completed</h4><input onChange={this.handleComplete} type="checkbox"></input>
+        <h4>Completed</h4><input onChange={this.handleComplete} checked={this.state.completed} type="checkbox"></input>
         <h4>Bookmark</h4><input onChange={this.handleBookmark} type="checkbox"></input>
       </div>
     );
@@ -36,6 +47,7 @@ class MainContentMarks extends React.Component<PropTypes, State> {
       this.setState({ completed: false });
       this.props.updateLevel(this.props.currentSkill, Update.DOWNGRADE);
     } else {
+      this.props.markCompleted(this.props.currentSkill.name);
       this.setState({ completed: true });
       this.props.updateLevel(this.props.currentSkill, Update.UPGRADE);
     }
