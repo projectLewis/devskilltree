@@ -7,6 +7,8 @@ interface PropTypes {
   viewableSkills: SlimSkill[];
   changeCurrentSkill: ((name: SlimSkill["name"]) => void);
   completedSkills: SlimSkill["name"][];
+  skillAlert: boolean;
+  toggleSkillAlert: (() => void);
 }
 
 interface State {
@@ -32,7 +34,13 @@ class SideBar extends React.Component<PropTypes, State> {
         onBlur={this.closeSidebar}
         className={style.sideBar}
       >
-        <h3 className={style.unlockedHeading}>Unlocked Skills</h3>
+        <h3 className={
+          this.props.skillAlert ?
+            style.newSkillAvailable :
+            style.unlockedHeading
+        }>
+          {this.props.skillAlert ? "New Resources Available!!" : "Unlocked Skills"}
+        </h3>
         {this.state.expanded ?
           <Levels
             completedSkills={this.props.completedSkills}
@@ -46,6 +54,9 @@ class SideBar extends React.Component<PropTypes, State> {
   }
 
   private expandSidebar() {
+    if (this.props.skillAlert) {
+      this.props.toggleSkillAlert();
+    }
     if (this.state.expanded !== true) {
       const transitionTime = 300;
       setTimeout(() => {

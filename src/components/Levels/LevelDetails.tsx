@@ -16,7 +16,7 @@ class LevelDetails extends React.Component<PropTypes, {}> {
     };
   }
   public render() {
-    const completed = this.props.completed;
+    const { completed } = this.props;
     return (
       <>
         <li className={completed ? style.skillItemComplete : style.skillItemInprogress} onClick={this.changeCurrentSkill.bind(this)}>

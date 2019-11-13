@@ -1,0 +1,5 @@
+.ReactModalPortal > div {
+    z-index: 3;
+    max-height: 400px;
+    width: 100%;
+}

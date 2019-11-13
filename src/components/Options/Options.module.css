@@ -1,0 +1,9 @@
+.suggestion {
+  font-size: 32px;
+  text-align: center;
+}
+
+.optionsList {
+  text-decoration: underline;
+  color: #BD3C6E;
+}
