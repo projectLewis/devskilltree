@@ -84,9 +84,9 @@ app.get("/api/skills/foundation/:name", async (req, res) => {
 
 })
 
-app.get("/", (req, res) => {
-  res.send("test good")
-})
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/../../build/index.html"));
+});
 
 app.use((req, res) => {
   res.status(404).send("Sorry can't find that!");
