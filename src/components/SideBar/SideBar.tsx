@@ -9,19 +9,51 @@ interface PropTypes {
   completedSkills: SlimSkill["name"][];
 }
 
-class SideBar extends React.Component<PropTypes, {}> {
+interface State {
+  expanded: boolean;
+}
+
+class SideBar extends React.Component<PropTypes, State> {
+  constructor(props: PropTypes) {
+    super(props);
+    this.state = {
+      expanded: false
+    };
+    this.expandSidebar = this.expandSidebar.bind(this);
+    this.closeSidebar = this.closeSidebar.bind(this);
+  }
+
   public render() {
-    // TODO add SideBarClosed
     return (
-      <section className={style.sideBarOpen}>
+      <section
+        onMouseEnter={this.expandSidebar}
+        onMouseLeave={this.closeSidebar}
+        onFocus={this.expandSidebar}
+        onBlur={this.closeSidebar}
+        className={style.sideBar}
+      >
         <h3 className={style.unlockedHeading}>Unlocked Skills</h3>
-        <Levels
-          completedSkills={this.props.completedSkills}
-          viewableSkills={this.props.viewableSkills}
-          changeCurrentSkill={this.props.changeCurrentSkill}
-        />
+        {this.state.expanded ?
+          <Levels
+            completedSkills={this.props.completedSkills}
+            viewableSkills={this.props.viewableSkills}
+            changeCurrentSkill={this.props.changeCurrentSkill}
+          />
+          : null
+        }
       </section>
     );
+  }
+
+  private expandSidebar() {
+    if (this.state.expanded !== true) {
+      this.setState({ expanded: true });
+    }
+  }
+  private closeSidebar() {
+    if (this.state.expanded !== false) {
+      this.setState({ expanded: false });
+    }
   }
 }
 

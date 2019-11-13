@@ -41,7 +41,7 @@ class App extends React.Component<{}, State> {
   public render() {
     return (
       <div>
-        <div>
+        <div className="mainPage">
           <Header />
           <Title />
           <MainContent
