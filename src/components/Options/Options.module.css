@@ -7,3 +7,11 @@
   text-decoration: underline;
   color: #BD3C6E;
 }
+
+.button {
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 15px;
+  margin-top: 7px;
+  margin-right: 3px;
+}

@@ -23,14 +23,14 @@ class Options extends React.Component<PropTypes, State> {
     return (
       <div>
         <p style={{ fontSize: "18px" }}>
-          You've come across some options for the next level: 
+          You've come across some options for the next level:
     {<span className={style.optionsList}> {this.props.newSkillOptions.join(", ")}</span>}. If you know what you wnat to learn next. Close this window, and continue your journey. If you're not sure. Let us suggest something for you.
-
-          Note: Either way you'll still have access to whatever path you don't choose. So you'll always be able to return to the alternate path later.
+      
+                Note: Either way you'll still have access to whatever path you don't choose. So you'll always be able to return to the alternate path later.
         </p>
         {this.state.suggestion ? <h3 className={style.suggestion}>{this.state.suggestion}</h3> : undefined}
-        <button onClick={this.suggestNextSkill}>Help Me Decide</button>
-        <button onClick={this.props.closeModal}>Close</button>
+        <button className={style.button} onClick={this.suggestNextSkill}>Help Me Decide</button>
+        <button className={style.button} onClick={this.props.closeModal}>Close</button>
       </div>
     );
   }
