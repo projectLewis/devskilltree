@@ -1,31 +1,45 @@
+.unlockedHeading, .newSkillAvailable {
+  font-size: 32px;
+  text-decoration: underline;
+  text-decoration-color: slateblue;
+  writing-mode: vertical-rl;
+  transition: 0.5s;
+}
+
 .unlockedHeading {
-    font-size: 24px;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: slateblue;
-    margin-bottom: 13px;
+  color: aliceblue;
 }
 
-.sideBarOpen {
-    border-right: 4px solid slateblue;
-    background-color: aliceblue;
-    width: 20%;
-    min-width: 230px;
-    height: 100%; 
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    /* transition: 0.5s; */
-    padding-left: 25px;
+.newSkillAvailable {
+  color: #EA544D;
 }
 
-.sideBarClosed {
-    width: 35px;
-    background-color: slateblue;
-    height: 100%; 
-    position: fixed;
-    top: 0;
-    z-index: 1;
+.sideBar {
+  background-color: navy;
+  width: 5%;
+  height: 100%; 
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  transition: width 0.7s, background-color 1.5s;
+  padding-left: 25px;
+}
+
+.sideBar:hover {
+  border-right: 4px solid slateblue;
+  background-color: aliceblue;
+  width: 25%;
+  padding-left: 25px;
+}
+
+.sideBar:hover > .unlockedHeading {
+  text-align: center;
+  /* color: rgb(77, 18, 77); */
+  /* color: #EA544D; */
+  color: navy;
+  text-decoration-color: slateblue;
+  margin-bottom: 13px;
+  writing-mode: initial;
 }

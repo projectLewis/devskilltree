@@ -36,8 +36,8 @@ class MainContentMarks extends React.Component<PropTypes, State> {
   public render() {
     return (
       <div className={style.checkboxArea}>
-        <h4>Completed</h4><input onChange={this.handleComplete} checked={this.state.completed} type="checkbox"></input>
-        <h4>Bookmark</h4><input onChange={this.handleBookmark} type="checkbox"></input>
+        <h4>Completed:</h4><input onChange={this.handleComplete} checked={this.state.completed} type="checkbox"></input>
+        <h4>Bookmark:</h4><input onChange={this.handleBookmark} type="checkbox"></input>
       </div>
     );
   }

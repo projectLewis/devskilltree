@@ -31,7 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: antiquewhite;
+	/* background-color: antiquewhite; */
+	background-color: #8BC0AB;
 }
 ol, ul {
 	list-style: none;
@@ -56,5 +57,5 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Libre Franklin', sans-serif;
-	color: rgb(77, 18, 77);
+	color: navy;
 }
