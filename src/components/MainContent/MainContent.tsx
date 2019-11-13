@@ -1,16 +1,26 @@
 import axios from "axios";
 import React from "react";
-import { DATABYLEVEL } from "../../constants";
-import { Skill } from "../../interface";
+import { DATABYLEVEL, DATABYNAME } from "../../constants";
+import { Skill, Update } from "../../interface";
 import AdditionalResource from "../AdditionalResource/AdditionalResource";
+import MainContentMarks from "../MainContentMarks/MainContentMarks";
 import MainVideo from "../MainVideo/MainVideo";
+import style from "./MainContent.module.css";
+
+interface PropTypes {
+  currentLevel: number;
+  currentSkillName: Skill["name"] | undefined;
+  updateLevel: ((currentSkill: Skill, update: Update) => void);
+  changeCurrentSkill: ((name: Skill["name"]) => void);
+  markCompleted: ((skill: Skill["name"]) => void);
+}
 
 interface State {
   currentSkill: Skill | undefined;
 }
 
-class MainContent extends React.Component<{}, State> {
-  constructor(props = {}) {
+class MainContent extends React.Component<PropTypes, State> {
+  constructor(props: PropTypes) {
     super(props);
     this.state = {
       currentSkill: undefined
@@ -18,7 +28,17 @@ class MainContent extends React.Component<{}, State> {
   }
 
   public componentDidMount() {
-    this.getDataByLevel(1);
+    if (this.props.currentSkillName === undefined) {
+      this.getDataByLevel(this.props.currentLevel);
+    } else {
+      this.getDataByName(this.props.currentSkillName);
+    }
+  }
+
+  public componentDidUpdate(prevProps: PropTypes) {
+    if (prevProps.currentSkillName !== this.props.currentSkillName && this.props.currentSkillName) {
+      this.getDataByName(this.props.currentSkillName);
+    }
   }
 
   public render() {
@@ -30,25 +50,48 @@ class MainContent extends React.Component<{}, State> {
       );
     }
     return (
-      <main>
-        <MainVideo video={this.state.currentSkill.video_embed} category={this.state.currentSkill.name} />
-        <div>
-          <h3>Complete</h3><input type="checkbox"></input>
-          <h3>Bookmark</h3><input type="checkbox"></input>
-        </div>
-        <ul>
-          {this.state.currentSkill.resource_links.map((resource, idx) => {
-            return (<AdditionalResource key={resource} index={idx} resource={resource} />);
+      <main className={style.mainContent}>
+        <MainVideo
+          video_embed={this.state.currentSkill.video_embed}
+          skillName={this.state.currentSkill.name}
+        />
+        <MainContentMarks
+          currentSkill={this.state.currentSkill}
+          updateLevel={this.props.updateLevel}
+          markCompleted={this.props.markCompleted}
+        />
+        <h2 className={style.additionalResourcesTitle}>Additional Resources:</h2>
+        <ol>
+          {this.state.currentSkill.resources.map((resource) => {
+            return (
+              <AdditionalResource
+                key={resource[1]}
+                url={resource[0]}
+                title={resource[1]}
+              />
+            );
           })}
-        </ul>
+        </ol>
       </main>
     );
   }
 
-  private async getDataByLevel(level: number) {
+  private async getDataByLevel(level: Skill["level"]) {
     const result = await axios.get(`${DATABYLEVEL}/${level}`);
-    const skill = result.data[0];
+    const skill: Skill = result.data[0];
     this.setState({ currentSkill: skill });
+    // if (this.props.currentSkillName !== skill.name) {
+    //   this.props.changeCurrentSkill(skill.name);
+    // }
+  }
+
+  private async getDataByName(name: Skill["name"]) {
+    const result = await axios.get(`${DATABYNAME}/${name}`);
+    const skill: Skill = result.data;
+    this.setState({ currentSkill: skill });
+    // if (this.props.currentSkillName !== skill.name) {
+    //   this.props.changeCurrentSkill(skill.name);
+    // }
   }
 }
 

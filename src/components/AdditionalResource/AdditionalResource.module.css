@@ -1,0 +1,20 @@
+.listItem {
+  list-style: decimal;
+}
+
+.resource {
+  text-decoration: none;
+}
+
+.resource > h3 {
+  color: black;
+  font-size: 24px;
+}
+
+.resource:hover {
+  text-decoration: underline;
+}
+
+.resource > h3:hover {
+  color: rgb(39, 114, 39);
+}

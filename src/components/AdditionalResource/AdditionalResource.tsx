@@ -1,16 +1,17 @@
 import React from "react";
+import style from "./AdditionalResource.module.css";
 
 interface PropTypes {
-  index: number;
-  resource: string;
+  url: string;
+  title: string;
 }
 
 class AdditionalResource extends React.Component<PropTypes, {}> {
   public render() {
     return (
       <>
-        <li>
-          <a href={this.props.resource}><h3>Additional Reading{this.props.index !== 0 ? ` ${this.props.index + 1}` : null}</h3></a>
+        <li className={style.listItem}>
+          <a href={this.props.url} target="_blank" rel="noopener noreferrer" className={style.resource}><h3>{this.props.title}</h3></a>
         </li>
       </>
     );

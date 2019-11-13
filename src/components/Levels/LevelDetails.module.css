@@ -1,0 +1,11 @@
+.skillItemInprogress {
+  list-style: circle;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.skillItemComplete {
+  list-style: disc;
+  padding: 3px;
+  cursor: pointer;
+}

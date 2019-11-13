@@ -1,0 +1,16 @@
+.mainContent {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 710px;
+}
+
+.additionalResourcesTitle {
+  font-size: 26px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5%;
+  text-decoration: underline;
+  text-decoration-color: slateblue;
+}
