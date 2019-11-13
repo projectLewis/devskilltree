@@ -5,7 +5,7 @@ Currently handles web development from HTML through database ORM tools.
 ## Table of contents
 * [Technologies](#technologies)
 * [Requirements](#requirements)
-* [Setup/Scripts](#available-scripts)
+* [Setup/Scripts](#scripts)
 * [About](#about)
 * [Future Development](#future-development)
 
