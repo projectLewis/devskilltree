@@ -47,7 +47,10 @@ class SideBar extends React.Component<PropTypes, State> {
 
   private expandSidebar() {
     if (this.state.expanded !== true) {
-      this.setState({ expanded: true });
+      const transitionTime = 300;
+      setTimeout(() => {
+        this.setState({ expanded: true });
+      }, transitionTime);
     }
   }
   private closeSidebar() {

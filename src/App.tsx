@@ -42,7 +42,7 @@ class App extends React.Component<{}, State> {
     return (
       <div>
         <div className="mainPage">
-          <Header />
+          {/* <Header /> */}
           <Title />
           <MainContent
             markCompleted={this.markCompleted}

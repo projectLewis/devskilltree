@@ -80,18 +80,12 @@ class MainContent extends React.Component<PropTypes, State> {
     const result = await axios.get(`${DATABYLEVEL}/${level}`);
     const skill: Skill = result.data[0];
     this.setState({ currentSkill: skill });
-    // if (this.props.currentSkillName !== skill.name) {
-    //   this.props.changeCurrentSkill(skill.name);
-    // }
   }
 
   private async getDataByName(name: Skill["name"]) {
     const result = await axios.get(`${DATABYNAME}/${name}`);
     const skill: Skill = result.data;
     this.setState({ currentSkill: skill });
-    // if (this.props.currentSkillName !== skill.name) {
-    //   this.props.changeCurrentSkill(skill.name);
-    // }
   }
 }
 
